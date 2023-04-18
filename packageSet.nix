@@ -44,6 +44,7 @@ let
     '';
 
     python.ipkgFile = "python-bindings.ipkg";
+    elab-util.ipkgFile = "elab-util.ipkg";
 
   };
 
@@ -72,6 +73,7 @@ let
       '';
     };
 
+    parser-json = idrisPackage (sources.parser + "/json") { };
     /* The following derivations are provided as examples, but are not to be provided in the build
       outputs of the derivation or repository.
 

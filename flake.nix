@@ -22,6 +22,7 @@
     inigo = { url = "github:idris-community/Inigo"; flake = false; };
     lsp = { url = "github:idris-community/idris2-lsp"; flake = false; };
     frex = { url = "github:frex-project/idris-frex"; flake = false; };
+    parser = { url = "github:stefan-hoeck/idris2-parser"; flake = false; };
     json = { url = "github:stefan-hoeck/idris2-json"; flake = false; };
     Prettier = { url = "github:Z-snails/prettier"; flake = false; };
     pretty-show = { url = "github:stefan-hoeck/idris2-pretty-show"; flake = false; };
@@ -29,7 +30,6 @@
     rhone = { url = "github:stefan-hoeck/idris2-rhone"; flake = false; };
     rhone-js = { url = "github:stefan-hoeck/idris2-rhone-js"; flake = false; };
     tailrec = { url = "github:stefan-hoeck/idris2-tailrec"; flake = false; };
-    idris-server = { url = "gitlab:avidela/idris-server"; flake = false; };
     xml = { url = "github:madman-bob/idris2-xml"; flake = false; };
     indexed = { url = "github:mattpolzin/idris-indexed"; flake = false; };
     hashable = { url = "github:z-snails/idris2-hashable"; flake = false; };
@@ -73,7 +73,7 @@
           ipkgs = removeAttrs pkgs.idris2-pkgs [ "override" "overrideDerivation" ];
         in
         {
-          packages = ipkgs;
+          packages = removeAttrs ipkgs ["_builders"];
 
           defaultPackage = ipkgs.idris2;
 
