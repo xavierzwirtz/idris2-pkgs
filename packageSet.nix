@@ -73,7 +73,21 @@ let
       '';
     };
 
+    elab-util = idrisPackage (sources.elab-util) {
+      ipkgFile = "elab-util.ipkg";
+    };
+
+    elab-pretty = idrisPackage (sources.elab-util) {
+      ipkgFile = "elab-pretty.ipkg";
+    };
+
     parser-json = idrisPackage (sources.parser + "/json") { };
+    parser-tsv = idrisPackage (sources.parser + "/tsv") { };
+    parser-show = idrisPackage (sources.parser + "/show") { };
+
+    prettier-ansi = idrisPackage (sources.ansi + "/prettier") { };
+
+    js = idrisPackage (sources.dom + "/js") { };
     /* The following derivations are provided as examples, but are not to be provided in the build
       outputs of the derivation or repository.
 
