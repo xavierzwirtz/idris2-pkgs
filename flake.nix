@@ -27,6 +27,8 @@
     sop = { url = "github:stefan-hoeck/idris2-sop"; flake = false; };
     rhone = { url = "github:stefan-hoeck/idris2-rhone"; flake = false; };
     rhone-js = { url = "github:stefan-hoeck/idris2-rhone-js"; flake = false; };
+    freer = { url = "github:stefan-hoeck/idris2-freer"; flake = false; };
+    eff = { url = "github:stefan-hoeck/idris2-eff"; flake = false; };
     tailrec = { url = "github:stefan-hoeck/idris2-tailrec"; flake = false; };
     refined = { url = "github:stefan-hoeck/idris2-refined"; flake = false; };
     algebra = { url = "github:stefan-hoeck/idris2-algebra"; flake = false; };
